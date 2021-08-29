@@ -11,6 +11,18 @@ let myserver = myhttp.createServer(
 
     console.log(myRequest.url);
     //http response header
+
+    let mytext;
+    if (myRequest.url === "/hey") {
+      mytext = "Well hi there...";
+    } else {
+      mytext = "Ehh get away!";
+    }
+
+    mytext = mytext + "please help me... I am trapped in a node.js server!";
+
+
+
     myResponse.writeHead(200, {"content-type":"text/plain"});
 
     myResponse.end("Hello Vera!\n");
